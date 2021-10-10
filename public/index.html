@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tutorial Blog Website</title>
+
+    <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-auth-compat.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css"
+        integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <ul class="nav ">
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Profile</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Create</a>
+            </li>
+            <li class="nav-item">
+                <a id="signInBtn" class="nav-link"> Sign in With Google</a>
+            </li>
+            <li class="nav-item">
+                <a id="signOutBtn" class="nav-link text-light btn btn-primary"> Sign Out</a>
+            </li>
+
+
+        </ul>
+    </nav>
+    <div class="container">
+
+        <section id="signedOut">
+        </section>
+
+
+        <section id="signedIn">
+        </section>
+    </div>
+    <!-- Common -->
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyBg3A2XLezYJhMcVCvk3jjS00--Tqtg-NY",
+            authDomain: "tutorialwebsite-ac01c.firebaseapp.com",
+            projectId: "tutorialwebsite-ac01c",
+            storageBucket: "tutorialwebsite-ac01c.appspot.com",
+            messagingSenderId: "184740389106",
+            appId: "1:184740389106:web:d1fe946c64c2a28900306b",
+            measurementId: "G-T0HYWWKF1P"
+        };
+
+        // Initialize Firebase
+        const app = firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="app.js" defer></script>
+</body>
+
+</html>
